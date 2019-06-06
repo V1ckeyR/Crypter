@@ -2,7 +2,7 @@
 
 const { ALPHABET } = require('./alphabet.js');
 
-const lastLetter = (alphabet) => alphabet.slice(-1).charCodeAt();
+const lastLetter = alphabet => alphabet.slice(-1).charCodeAt();
 
 const OPERATIONS = {
   encode: (i, text, key) => key[i].charCodeAt() + ALPHABET.indexOf(text[i]),
@@ -24,7 +24,7 @@ function suitableKey(length, key) {
 }
 
 function vigenere(text, operation, key) {
-  let result = [];
+  const result = [];
   let symbol;
   key = suitableKey(text.length, key);
 
