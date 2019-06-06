@@ -3,7 +3,7 @@
 const { ALPHABET_MORZE } = require('./alphabet.js');
 
 const OPERATIONS = {
-  encode: text =>	text
+  encode: text => text
     .map(letter => {
       letter = letter.toUpperCase();
       return letter in ALPHABET_MORZE ? ALPHABET_MORZE[letter] + ' ' : letter;
